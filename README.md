@@ -1,9 +1,11 @@
-# Weather Forceast App built with Angular and ES6.
+# Angular ES6 Weather Forceast App
 
 A weather application which lets you view forecast for a city.
 
-It is built with Angular and ES6. Openweathermap API is used to fetch the forecast.
-Foundation CSS framework is used to style the app. EJS template engine is used to add the environments scripts.
+It is built with Angular and ES6.
+Openweathermap API is used to fetch the forecast.
+Foundation CSS framework is used to style the app.
+EJS template engine is used to add the environments scripts.
 
 Gulp is used to build the application and includes a livereload development webserver.
 
