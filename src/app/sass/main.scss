@@ -1,0 +1,54 @@
+$body-bg: #3F51B5;
+//$body-bg: #5e35b1;
+$text-color: #fff;
+
+@import '/home/kristoffer/dev/web/projects/Angular-ES6-JSPM-Gulp/bower_components/foundation/scss/foundation';
+@import 'fonts';
+/**
+ * Main SCSS file
+ */
+
+
+h1,h2,h3,h4,h5 {
+  color: $text-color;
+}
+
+*[ng-cloak] {
+  display: none;
+}
+
+input[type=text] {
+  padding: 5px;
+}
+
+//noinspection SassScssUnresolvedVariable
+body:after {
+  display: block;
+  content: "$environment: #{$environment} / $revision: #{$revision}";
+}
+
+.top {
+  margin-top: 5em;
+}
+
+// input[type="text"] {
+//   font-size: 2em;
+// }
+
+.icon {
+  font-family: "Meteocons", sans-serif;
+  font-size: 2em;
+  &.large {
+    font-size: 6em;
+  }
+}
+
+.card {
+  background-color: #ff9800;
+  color: $text-color;
+  padding: 0.3em 1em 1em 0.5em;
+}
+
+.columns {
+  margin-bottom: 1em;
+}

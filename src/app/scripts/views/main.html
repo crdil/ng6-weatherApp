@@ -1,0 +1,32 @@
+<div class="row top">
+    <div class="large-12 columns">
+      <div class="row collapse">
+        <h4>Show forecast in city</h4>
+        <div class="small-10 columns">
+          <input type="text" ng-model="weatherCtrl.forecastCity" placeholder="City Name">
+        </div>
+        <div class="small-2 columns">
+          <button class="button postfix" ng-click="weatherCtrl.searchByCity()">Search</button>
+        </div>
+      </div>
+      <button type="button" class="success button" ng-click="weatherCtrl.getGeoPosition()">Get Weather By Your Location</button>
+    </div>
+  </div>
+
+<div class="row">
+  <h2 class="text-center">Forecast for {{ weatherCtrl.weatherData.city.name }} next 7 days</h2>
+  <div ng-repeat="w in weatherCtrl.weatherData.list">
+    <div class="medium-3 columns text-center">
+      <div class="top card">
+        <h3>{{ weatherCtrl.convertDate(w.dt) }}</h3>
+        <span class="icon large">{{ weatherCtrl.checkIcon(w.weather[0].icon) }}</span><br/>
+        <p>▲{{w.temp.max}}°C
+          <br/>▼{{w.temp.min}}°C
+          <br/>Humidity: {{w.humidity}}%
+          <br/>
+        </p>
+        <span class="icon">F</span>{{w.speed}} m/s
+      </div>
+    </div>
+  </div>
+</div>
