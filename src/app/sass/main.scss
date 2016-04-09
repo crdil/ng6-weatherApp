@@ -1,16 +1,16 @@
+/**
+* main.scss
+*/
+
 $body-bg: #3F51B5;
-//$body-bg: #5e35b1;
 $text-color: #fff;
 
-@import '/home/kristoffer/dev/web/projects/Angular-ES6-JSPM-Gulp/bower_components/foundation/scss/foundation';
+@import '/home/kristoffer/dev/web/projects/au-weatherApp/bower_components/foundation/scss/foundation';
 @import 'fonts';
-/**
- * Main SCSS file
- */
 
 
 h1,h2,h3,h4,h5 {
-  color: $text-color;
+  color: $white;
 }
 
 *[ng-cloak] {

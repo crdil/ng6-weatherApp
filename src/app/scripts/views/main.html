@@ -19,7 +19,7 @@
     <div class="medium-3 columns text-center">
       <div class="top card">
         <h3>{{ weatherCtrl.convertDate(w.dt) }}</h3>
-        <span class="icon large">{{ weatherCtrl.checkIcon(w.weather[0].icon) }}</span><br/>
+        <span class="icon large">{{ weatherCtrl.getIcon(w.weather[0].icon) }}</span><br/>
         <p>▲{{w.temp.max}}°C
           <br/>▼{{w.temp.min}}°C
           <br/>Humidity: {{w.humidity}}%

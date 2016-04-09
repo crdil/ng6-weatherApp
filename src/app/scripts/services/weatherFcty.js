@@ -36,7 +36,6 @@ export default /* @ngInject */ class WeatherFactory {
     return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          // console.log(position.coords);
           resolve(position);
         },
         (error) => {

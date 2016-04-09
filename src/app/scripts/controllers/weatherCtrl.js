@@ -1,16 +1,12 @@
 export default /* @ngInject */ class WeatherController {
-  constructor($scope, $stateParams, $http, WeatherFactory) {
+  constructor($http, WeatherFactory) {
     this.$http = $http;
     this.WeatherFactory = WeatherFactory;
 
     this.weatherData = [];
     this.forecastCity = 'Umea';
-    this.coords = [];
     this.pos = {};
     this.weathericon = '';
-
-    this.searchByCity();
-    this.getGeoPosition();
 
   }
 
@@ -21,10 +17,16 @@ export default /* @ngInject */ class WeatherController {
     });
   }
 
+  searchByLocation(coordinates) {
+    this.WeatherFactory.getByLocation(coordinates)
+    .then(result => {
+      this.weatherData = result.data;
+    });
+  }
+
   getGeoPosition() {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        // this.coords = [position.coords.latitude, position.coords.longitude];
         this.pos.longitude = position.coords.longitude;
         this.pos.latitude = position.coords.latitude;
         this.searchByLocation(this.pos);
@@ -35,19 +37,8 @@ export default /* @ngInject */ class WeatherController {
     );
   }
 
-  searchByLocation(coordinates) {
-    this.WeatherFactory.getByLocation(coordinates)
-      .then(result => {
-        this.weatherData = result.data;
-        // console.log(result);
-      });
-  }
-
-  checkIcon(iconres) {
-    // console.log(iconres);
-    // console.log('called');
-    // relates to the json repsonses of the api we are using
-    switch (iconres) {
+  getIcon(iconCode) {
+    switch (iconCode) {
       case "01d":
         this.weathericon = "B";
         return this.weathericon;
