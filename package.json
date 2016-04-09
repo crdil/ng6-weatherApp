@@ -1,12 +1,12 @@
 {
-  "name": "__project__",
-  "version": "0.0.1",
-  "description": "Web project template. Featuring JSPM, Gulp, SASS, live reloads.",
+  "name": "WeatherApp",
+  "version": "0.1",
+  "description": "Weather App built with Angular, ES6",
   "main": "src/app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mikhail Yurasov <me@yurasov.me>",
+  "author": "crdil <cardiel@gmx.com>",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.9.4",
